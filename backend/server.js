@@ -104,7 +104,7 @@ connection.connect((err) => {
 
 
 
-app.post("/new/catagory", auth, upload.single("file"), (req, res) => {
+app.post("/new/catagory", upload.single("file"), (req, res) => {
   const catagory = req.body.catagory;
   const catagory_amh = req.body.catagory_amh;
 
