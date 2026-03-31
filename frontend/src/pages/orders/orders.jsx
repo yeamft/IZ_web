@@ -11,7 +11,7 @@ const Orders = () => {
   const [user_id,setuserid]=useState("");
   const [payment_status,setpayment_status]=useState("");
 useEffect(()=> {
-    fetch("http://localhost:3001/orders/all").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/orders/all").then((data) => data.json())
     .then((data) => setData(data) )
   }, [])
 
@@ -40,7 +40,7 @@ useEffect(()=> {
       payment=0;
     }
     
-    axios.post("http://localhost:3001/order/changestatus",{payment_status: payment,order_id: id}).then(()=> alert("sucess"));
+    axios.post("https://iz-web.onrender.com/order/changestatus",{payment_status: payment,order_id: id}).then(()=> alert("sucess"));
     window.location.reload(false);
   };
   const change_order_status = (id,status) => {
@@ -55,13 +55,13 @@ useEffect(()=> {
       order_status="pending";
     }
     
-    axios.post("http://localhost:3001/order/change_delivery_status",{delivery_status: order_status,order_id: id}).then(()=> alert("sucess"));
+    axios.post("https://iz-web.onrender.com/order/change_delivery_status",{delivery_status: order_status,order_id: id}).then(()=> alert("sucess"));
     window.location.reload(false);
   };
   
   const handleactive = (id) => {
     setuserid(id);
-    axios.post("http://localhost:3001/suppliers/changestatus",{userid: user_id,status_supplier: "Active"}).then(()=> alert("sucess"));
+    axios.post("https://iz-web.onrender.com/suppliers/changestatus",{userid: user_id,status_supplier: "Active"}).then(()=> alert("sucess"));
   };
 
   const userColumns = [

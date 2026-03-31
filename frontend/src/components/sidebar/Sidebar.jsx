@@ -27,7 +27,7 @@ const Sidebar = () => {
   const logout =()=>
   {
   
-    axios.get("http://localhost:3001/logout");
+    axios.get("https://iz-web.onrender.com/logout");
     navigate("/");
 
   }

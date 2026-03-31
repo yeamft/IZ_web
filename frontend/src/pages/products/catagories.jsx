@@ -11,12 +11,12 @@ const Catagories = () => {
   const [data_user,setData]=useState([]);
  
   useEffect(()=> {
-    fetch("http://localhost:3001/catagory/all").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/catagory/all").then((data) => data.json())
     .then((data) => setData(data))
   }, [])
 
   const handleDelete = (id) => {
-    axios.post("http://localhost:3001/catagory/delete",{catagory_id: id}).then((response) => {
+    axios.post("https://iz-web.onrender.com/catagory/delete",{catagory_id: id}).then((response) => {
       if (response.data=="fail") {
         alert("There is products registered under this catagory");
         window.location.reload(false) ;

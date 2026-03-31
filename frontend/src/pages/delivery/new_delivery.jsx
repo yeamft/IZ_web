@@ -18,7 +18,7 @@ const New_delivery = () => {
  
 const senddata =()=> {
 
-  axios.post("http://localhost:3001/delivery/new",{firstname: firstname,lastname: lastname,middlename: middlename,phone: phone,userpassword: userpassword,user_password: userpassword,longtuide: longtuide,latitude: latitude,address:address}).then(()=> alert("sucess"));
+  axios.post("https://iz-web.onrender.com/delivery/new",{firstname: firstname,lastname: lastname,middlename: middlename,phone: phone,userpassword: userpassword,user_password: userpassword,longtuide: longtuide,latitude: latitude,address:address}).then(()=> alert("sucess"));
 };
   return (
     <div className="new">

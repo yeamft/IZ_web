@@ -10,7 +10,7 @@ const Detail = () => {
   const { userid } = useParams("");
   const [data_user,setData]=useState([]);
   useEffect(()=> {
-      axios.post("http://localhost:3001/delivery/byid",{userid: userid}).then((response) =>{
+      axios.post("https://iz-web.onrender.com/delivery/byid",{userid: userid}).then((response) =>{
       setData(response.data[0]);
 
       })

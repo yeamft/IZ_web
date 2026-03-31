@@ -4,7 +4,7 @@ function Auth({ nextpage })
 {  
     const [status,setLoginStatus]=useState("");
     useEffect(() => {
-        fetch("http://localhost:3001/user/login",{withCredentials: true})
+        fetch("https://iz-web.onrender.com/user/login",{withCredentials: true})
           .then((res) => res.json())
           .then((data) => {
            setLoginStatus(data.loggedIn)

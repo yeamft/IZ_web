@@ -12,7 +12,7 @@ const Order_assign  = () => {
   const [user_id,setuserid]=useState("");
   const [payment_status,setpayment_status]=useState("");
 useEffect(()=> {
-    axios.post("http://localhost:3001/order/assign",{order_id: orderId}).then((response) =>{
+    axios.post("https://iz-web.onrender.com/order/assign",{order_id: orderId}).then((response) =>{
       if(response.data=="failed")
       {
           setData("");
@@ -32,11 +32,11 @@ useEffect(()=> {
  
   const assign_delivery = (id) => {
     
-   // axios.post("http://localhost:3001/delivery/assign",{order_id: orderId,delivery_id: id}).then(()=> alert("sucess"));
+   // axios.post("https://iz-web.onrender.com/delivery/assign",{order_id: orderId,delivery_id: id}).then(()=> alert("sucess"));
   };
   const handleactive = (id) => {
     setuserid(id);
-    axios.post("http://localhost:3001/suppliers/changestatus",{userid: user_id,status_supplier: "Active"}).then(()=> alert("sucess"));
+    axios.post("https://iz-web.onrender.com/suppliers/changestatus",{userid: user_id,status_supplier: "Active"}).then(()=> alert("sucess"));
   };
 
   const userColumns = [

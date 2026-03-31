@@ -29,7 +29,7 @@ const Updatecatagory = () => {
         formData.append("catagory_id",catagoryId)
        
           axios.post(
-            "http://localhost:3001/update/catagory",formData
+            "https://iz-web.onrender.com/update/catagory",formData
           ).then((response) => {
           alert(response.data);
           
@@ -37,7 +37,7 @@ const Updatecatagory = () => {
       }
       useEffect(() => {
         axios
-          .post("http://localhost:3001/catagory/byid", { catagory_id: catagoryId })
+          .post("https://iz-web.onrender.com/catagory/byid", { catagory_id: catagoryId })
           .then((response) => {
             setData(response.data[0]);
           });

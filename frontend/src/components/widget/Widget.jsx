@@ -12,7 +12,7 @@ const Widget=({type}) =>
       const [suppliers,viewsuppliers]=useState("");
       useEffect(()=> 
     {
-        axios.get("http://localhost:3001/dashboard/suppliers").then((response)=>
+        axios.get("https://iz-web.onrender.com/dashboard/suppliers").then((response)=>
           {
             viewsuppliers(response.data[0]);
           });
@@ -24,7 +24,7 @@ const Widget=({type}) =>
 
     
      {
-            axios.get("http://localhost:3001/dashboard/users").then((response)=>
+            axios.get("https://iz-web.onrender.com/dashboard/users").then((response)=>
             {
               fetchuser(response.data[0]);
             });
@@ -32,7 +32,7 @@ const Widget=({type}) =>
     const [orders,fetchorders]=useState("");
     useEffect(()=>
     {
-          axios.get("http://localhost:3001/dashboard/todayorder").then((response)=>
+          axios.get("https://iz-web.onrender.com/dashboard/todayorder").then((response)=>
           {
             fetchorders(response.data[0]);
           });
@@ -42,7 +42,7 @@ const Widget=({type}) =>
     let info;
     useEffect(()=>
     {
-      axios.get("http://localhost:3001/dashboard/delivery").then((response)=>
+      axios.get("https://iz-web.onrender.com/dashboard/delivery").then((response)=>
        {
            fetchdelivery(response.data[0]);
 

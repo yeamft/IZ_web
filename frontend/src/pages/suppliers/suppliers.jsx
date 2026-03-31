@@ -11,7 +11,7 @@ const Suppliers = () => {
   const [user_id,setuserid]=useState("");
   
 useEffect(()=> {
-    fetch("http://localhost:3001/suppliers/all").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/suppliers/all").then((data) => data.json())
     .then((data) => setData(data))
   
 
@@ -28,12 +28,12 @@ useEffect(()=> {
       user_status="Active";
     }
     
-    axios.post("http://localhost:3001/suppliers/changestatus",{userid: id,status_supplier: user_status}).then(()=> alert("sucess"),window.location.reload(false));
+    axios.post("https://iz-web.onrender.com/suppliers/changestatus",{userid: id,status_supplier: user_status}).then(()=> alert("sucess"),window.location.reload(false));
   };
 // console.log(data_user);
   const handleDelete = (id) => {
   
-    axios.post("http://localhost:3001/supplier/delete",{supplier_id: id}).then((response) => {
+    axios.post("https://iz-web.onrender.com/supplier/delete",{supplier_id: id}).then((response) => {
   
       if (response.data=="fail") {
         alert("Order already exist from this supplier!!");

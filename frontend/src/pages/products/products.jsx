@@ -10,12 +10,12 @@ const Products = () => {
   const [data_user,setData]=useState([]);
   const [number,setnumber]=useState("0");
 useEffect(()=> {
-    fetch("http://localhost:3001/product/all").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/product/all").then((data) => data.json())
     .then((data) => setData(data))
   }, [])
 
   const handleDelete = (id) => {
-    axios.post("http://localhost:3001/product/delete",{product_id: id}).then((response) => {
+    axios.post("https://iz-web.onrender.com/product/delete",{product_id: id}).then((response) => {
   
       if (response.data=="fail") {
         alert("This Product Is Already Orderd By the User");

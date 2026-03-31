@@ -6,13 +6,13 @@ import axios  from "axios";
 
 const Password_change = () => {
   
-  // axios.post("http://localhost:3001/businesstype",{type_name: e.target.business_type_name.value}).then(()=> alert("sucess"));
+  // axios.post("https://iz-web.onrender.com/businesstype",{type_name: e.target.business_type_name.value}).then(()=> alert("sucess"));
  
   const [new_password,set_new_password]=useState();
  
   
   const change_password= ()=> {
- axios.post("http://localhost:3001/change_password",{password: new_password}).then(()=> alert("sucess"),window.location.reload(false));
+ axios.post("https://iz-web.onrender.com/change_password",{password: new_password}).then(()=> alert("sucess"),window.location.reload(false));
   }
     return (
         <div className="new">

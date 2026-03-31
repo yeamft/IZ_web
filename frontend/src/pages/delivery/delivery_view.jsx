@@ -10,7 +10,7 @@ const Delivery= () => {
   const [user_id,setuserid]=useState("");
   const [status,setstatus]=useState("");
 useEffect(()=> {
-    fetch("http://localhost:3001/delivery/all").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/delivery/all").then((data) => data.json())
     .then((data) => setData(data))
   
 
@@ -37,11 +37,11 @@ useEffect(()=> {
       user_status=1;
     }
     
-    axios.post("http://localhost:3001/delivery/changestatus",{userid: id,status_delivery: user_status}).then(()=> alert("sucess"));
+    axios.post("https://iz-web.onrender.com/delivery/changestatus",{userid: id,status_delivery: user_status}).then(()=> alert("sucess"));
   };
 
   const handleDelete = (id) => {
-    axios.post("http://localhost:3001/delivery/delete",{delivery_id: id}).then(()=> alert("sucess"));
+    axios.post("https://iz-web.onrender.com/delivery/delete",{delivery_id: id}).then(()=> alert("sucess"));
   };
   const userColumns = [
   

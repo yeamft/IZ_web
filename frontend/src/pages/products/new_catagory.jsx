@@ -24,7 +24,7 @@ const New_catagory = () => {
         formData.append("catagory_amh",catagory_amh)
        
           axios.post(
-            "http://localhost:3001/new/catagory",formData
+            "https://iz-web.onrender.com/new/catagory",formData
           ).then((response) => {
           alert(response.data);
           
@@ -34,7 +34,7 @@ const New_catagory = () => {
     const imagedata=new FormData();
     imagedata.append("image",e.target.catagory_img.value);
     
-//    axios.post("http://localhost:3001/new/catagory",{catagory_name: e.target.catagory.value,catagory_image: e.target.catagory_img.value}).then((response) => {
+//    axios.post("https://iz-web.onrender.com/new/catagory",{catagory_name: e.target.catagory.value,catagory_image: e.target.catagory_img.value}).then((response) => {
 //     console.log(response.data);
     // if (response.data=="fail") {
     //   alert("This Product Is Already Orderd By the User");

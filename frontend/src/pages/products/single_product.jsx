@@ -19,7 +19,7 @@ const Single_Product = () => {
  
   
   useEffect(()=> {
-      axios.post("http://localhost:3001/product/byid",{product_id: productId}).then((response) =>{
+      axios.post("https://iz-web.onrender.com/product/byid",{product_id: productId}).then((response) =>{
 setData(response.data[0]);
 
       })
@@ -27,7 +27,7 @@ setData(response.data[0]);
   
     }, [])
     useEffect(()=> {
-      axios.post("http://localhost:3001/product_image/byid",{product_id: productId}).then((response) =>{
+      axios.post("https://iz-web.onrender.com/product_image/byid",{product_id: productId}).then((response) =>{
  setimage(response.data);
  
  

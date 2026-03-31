@@ -14,7 +14,7 @@ const UpdateBussinessType = () => {
       const uploadFile = async (e) => {
        
           axios.post(
-            "http://localhost:3001/update/businesstype",{type_id: typeId,type_name: e.target.type.value,type_name_amh: e.target.type_amh.value}
+            "https://iz-web.onrender.com/update/businesstype",{type_id: typeId,type_name: e.target.type.value,type_name_amh: e.target.type_amh.value}
           ).then((response) => {
           alert("successfull!!");
           
@@ -22,7 +22,7 @@ const UpdateBussinessType = () => {
       }
       useEffect(() => {
         axios
-          .post("http://localhost:3001/businesstype/byid", { type_id: typeId })
+          .post("https://iz-web.onrender.com/businesstype/byid", { type_id: typeId })
           .then((response) => {
             setData(response.data[0]);
           });

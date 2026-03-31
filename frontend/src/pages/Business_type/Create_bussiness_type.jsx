@@ -7,7 +7,7 @@ import axios  from "axios";
 
 const Create_bussiness_type = () => {
   const create_type = (e) => {
-   axios.post("http://localhost:3001/businesstype",{type_name: e.target.business_type_name.value,type_name_amh: e.target.business_type_name_amh.value})
+   axios.post("https://iz-web.onrender.com/businesstype",{type_name: e.target.business_type_name.value,type_name_amh: e.target.business_type_name_amh.value})
    .then((response) => {
     alert("successfull!!");
   })

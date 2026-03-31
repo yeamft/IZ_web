@@ -25,7 +25,7 @@ const New_type = () => {
         formData.append("product_type",product_type)
         formData.append("product_type_amh",product_type_amh)
           axios.post(
-            "http://localhost:3001/new/product_type",formData
+            "https://iz-web.onrender.com/new/product_type",formData
           ).then((response) => {
           alert(response.data);
           
@@ -34,7 +34,7 @@ const New_type = () => {
       const [catagories, setcatagories] = useState([]);
 
       useEffect(() => {
-        fetch('http://localhost:3001/catagory/all')
+        fetch('https://iz-web.onrender.com/catagory/all')
           .then(res => res.json())
           .then(data => {
             setcatagories(data);
@@ -44,7 +44,7 @@ const New_type = () => {
     const imagedata=new FormData();
     imagedata.append("image",e.target.catagory_img.value);
     
-//    axios.post("http://localhost:3001/new/catagory",{catagory_name: e.target.catagory.value,catagory_image: e.target.catagory_img.value}).then((response) => {
+//    axios.post("https://iz-web.onrender.com/new/catagory",{catagory_name: e.target.catagory.value,catagory_image: e.target.catagory_img.value}).then((response) => {
 //     console.log(response.data);
     // if (response.data=="fail") {
     //   alert("This Product Is Already Orderd By the User");

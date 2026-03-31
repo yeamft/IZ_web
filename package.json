@@ -1,0 +1,10 @@
+{
+  "name": "iz-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install": "npm install --prefix backend",
+    "start": "npm start --prefix backend",
+    "build": "npm run build --prefix backend"
+  }
+}

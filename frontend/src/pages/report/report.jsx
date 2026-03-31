@@ -11,7 +11,7 @@ const Report= () => {
   const [user_id,setuserid]=useState("");
   
 useEffect(()=> {
-    fetch("http://localhost:3001/report").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/report").then((data) => data.json())
     .then((data) => setData(data))
   
 

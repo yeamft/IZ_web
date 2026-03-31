@@ -46,8 +46,8 @@ const New_product = () => {
       Array.from(images).forEach(item => {
          formData.append('products', item)
       })
-      const url = 'http://localhost:5000/image'
-      axios.post("http://localhost:3001/product/new", formData, product_name_amh)
+      const url = 'https://iz-web.onrender.com/image'
+      axios.post("https://iz-web.onrender.com/product/new", formData, product_name_amh)
       .then(result => {
          alert(result)
          console.log(result);
@@ -58,7 +58,7 @@ const New_product = () => {
    }
    const view_type = (catagory_value) => {
       setcatagory(catagory_value);
-      axios.post('http://localhost:3001/producttype/by_catagory', { selected_catagory: catagory_value })
+      axios.post('https://iz-web.onrender.com/producttype/by_catagory', { selected_catagory: catagory_value })
          .then(res => setproduct_types(res.data))
 
    }
@@ -72,14 +72,14 @@ const New_product = () => {
       }
    }
    useEffect(() => {
-      fetch('http://localhost:3001/catagory/all')
+      fetch('https://iz-web.onrender.com/catagory/all')
          .then(res => res.json())
          .then(data => {
             setcatagories(data);
          });
    }, []);
    useEffect(() => {
-      fetch('http://localhost:3001/suppliers/all')
+      fetch('https://iz-web.onrender.com/suppliers/all')
          .then(res => res.json())
          .then(data => {
             setsuppliers(data);

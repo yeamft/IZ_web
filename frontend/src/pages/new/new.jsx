@@ -31,7 +31,7 @@ const New = () => {
   const [type, set_type] = useState("product");
   const [bussiness_types, setbussiness_types] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3001/business_type/all')
+    fetch('https://iz-web.onrender.com/business_type/all')
       .then(res => res.json())
       .then(data => {
         setbussiness_types(data);
@@ -75,7 +75,7 @@ const senddata =()=> {
   formData.append("tin_number",tin_number);
   formData.append("type",type);
   
-  axios.post("http://localhost:3001/suppliers/new",formData).then((response) => alert(response.data));
+  axios.post("https://iz-web.onrender.com/suppliers/new",formData).then((response) => alert(response.data));
 }
       
   return (

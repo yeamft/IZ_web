@@ -11,7 +11,7 @@ const Viewsupplier = () => {
     
         const [data_user,setData]=useState([]);
         useEffect(()=> {
-            axios.post("http://localhost:3001/supplier/view",{userid: userid}).then((response) =>{
+            axios.post("https://iz-web.onrender.com/supplier/view",{userid: userid}).then((response) =>{
 setData(response.data[0]);
 
             } )

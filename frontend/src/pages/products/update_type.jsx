@@ -29,7 +29,7 @@ const UpdateType = () => {
         
        
           axios.post(
-            "http://localhost:3001/update/type",formData
+            "https://iz-web.onrender.com/update/type",formData
           ).then((response) => {
           alert(response.data);
           
@@ -37,14 +37,14 @@ const UpdateType = () => {
       }
       useEffect(() => {
         axios
-          .post("http://localhost:3001/type/byid", { type_id: typeId })
+          .post("https://iz-web.onrender.com/type/byid", { type_id: typeId })
           .then((response) => {
             setData(response.data[0]);
           });
       }, []);
       const [catagories, setcatagories] = useState([]);
       useEffect(() => {
-        fetch("http://localhost:3001/catagory/all")
+        fetch("https://iz-web.onrender.com/catagory/all")
           .then((res) => res.json())
           .then((data) => {
             setcatagories(data);

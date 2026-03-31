@@ -30,7 +30,7 @@ const Update_Product = () => {
   const [images, setimage] = useState([]);
   useEffect(() => {
     axios
-      .post("http://localhost:3001/product/byid", { product_id: productId })
+      .post("https://iz-web.onrender.com/product/byid", { product_id: productId })
       .then((response) => {
         setData(response.data[0]);
         
@@ -50,7 +50,7 @@ const Update_Product = () => {
           console.log(image_id);
         
             axios.post(
-              "http://localhost:3001/update/product_image",formData
+              "https://iz-web.onrender.com/update/product_image",formData
             ).then((response) => {
             alert(response.data);
             window.location.reload(false) ;
@@ -121,7 +121,7 @@ const Update_Product = () => {
      formData.append("date_order", orderdate);
   
     axios
-      .post("http://localhost:3001/product/update",  
+      .post("https://iz-web.onrender.com/product/update",  
         {product_id: productId,
         product_name: e.target.product_name.value,
         product_name_amh: e.target.product_name_amh.value,
@@ -145,7 +145,7 @@ const Update_Product = () => {
   // console.log(data_user);
 
   useEffect(() => {
-    fetch("http://localhost:3001/catagory/all")
+    fetch("https://iz-web.onrender.com/catagory/all")
       .then((res) => res.json())
       .then((data) => {
         setcatagories(data);
@@ -157,7 +157,7 @@ const Update_Product = () => {
   const [product_types, setproduct_types] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/producttype/all")
+    fetch("https://iz-web.onrender.com/producttype/all")
       .then((res) => res.json())
       .then((data) => {
         setproduct_types(data);
@@ -166,7 +166,7 @@ const Update_Product = () => {
   const [suppliers, setsuppliers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/supplier")
+    fetch("https://iz-web.onrender.com/supplier")
       .then((res) => res.json())
       .then((data) => {
         setsuppliers(data);
@@ -176,7 +176,7 @@ const Update_Product = () => {
 
 
   useEffect(()=> {
-    axios.post("http://localhost:3001/product_image/byid",{product_id: productId}).then((response) =>{
+    axios.post("https://iz-web.onrender.com/product_image/byid",{product_id: productId}).then((response) =>{
 setimage(response.data);
     })
   }, [])

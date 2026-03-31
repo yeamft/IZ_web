@@ -10,7 +10,7 @@ const Bussiness = () => {
   const [data_user,setData]=useState([]);
  
 useEffect(()=> {
-    fetch("http://localhost:3001/business_type/all").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/business_type/all").then((data) => data.json())
     .then((data) => setData(data))
   
 
@@ -20,7 +20,7 @@ useEffect(()=> {
             
  }
   const handleDelete = (id) => {
-    axios.post("http://localhost:3001/businesstype/delete",{type_id: id}).then((response) => {
+    axios.post("https://iz-web.onrender.com/businesstype/delete",{type_id: id}).then((response) => {
       
       if (response.data=="fail") {
         alert("can`t delete");

@@ -6,18 +6,18 @@ import axios  from "axios";
 
 const Setting = () => {
   
-  // axios.post("http://localhost:3001/businesstype",{type_name: e.target.business_type_name.value}).then(()=> alert("sucess"));
+  // axios.post("https://iz-web.onrender.com/businesstype",{type_name: e.target.business_type_name.value}).then(()=> alert("sucess"));
   const [data_user,setData]=useState([]);
   const [distance,setdistance]=useState();
   useEffect(()=> {
-    fetch("http://localhost:3001/distance").then((data) => data.json())
+    fetch("https://iz-web.onrender.com/distance").then((data) => data.json())
     .then((data) => setData(data))
      setdistance(data_user);
     
   },[])
   
   const update_distance= ()=> {
- axios.post("http://localhost:3001/distance/update",{distance: distance}).then(()=> alert("sucess"),window.location.reload(false));
+ axios.post("https://iz-web.onrender.com/distance/update",{distance: distance}).then(()=> alert("sucess"),window.location.reload(false));
   }
     return (
         <div className="new">

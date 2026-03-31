@@ -22,7 +22,7 @@ const Login=()=>
        alert("Please Fill All The Fields!!");
     }
     else{
-     axios.post("http://localhost:3001/user/login",{phone: phone,password: password},{withCredentials: true}).then((response) => 
+     axios.post("https://iz-web.onrender.com/user/login",{phone: phone,password: password},{withCredentials: true}).then((response) => 
      {
         
           if (!response.data.message)

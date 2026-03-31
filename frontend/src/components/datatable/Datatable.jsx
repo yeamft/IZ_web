@@ -12,18 +12,18 @@ const Datatable = () => {
   const [user_id,setuserid]=useState("");
   const [view_id,setviewid]=useState("");
   useEffect(()=> {
-        fetch("http://localhost:3001/users/all").then((data) => data.json())
+        fetch("https://iz-web.onrender.com/users/all").then((data) => data.json())
         .then((data) => setData(data))
       
     
       }, [])
       const handleDelete = (id) => {
         setuserid(id);
-        // axios.post("http://localhost:3001/suppliers/changestatus",{userid: user_id,status_supplier: "NotActive"}).then(()=> alert("sucess"));
+        // axios.post("https://iz-web.onrender.com/suppliers/changestatus",{userid: user_id,status_supplier: "NotActive"}).then(()=> alert("sucess"));
       };
       const handleactive = (id) => {
         setuserid(id);
-        // axios.post("http://localhost:3001/suppliers/changestatus",{userid: user_id,status_supplier: "Active"}).then(()=> alert("sucess"));
+        // axios.post("https://iz-web.onrender.com/suppliers/changestatus",{userid: user_id,status_supplier: "Active"}).then(()=> alert("sucess"));
       };
 // console.log(data_user);
 
